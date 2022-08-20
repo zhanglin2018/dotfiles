@@ -67,8 +67,8 @@ keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 -- keymap("n", "R", ":bnext<CR>", opts)
 -- keymap("n", "E", ":bprevious<CR>", opts)
 -- NOTE: E/R navigation needs  'bufferline' plugin
-keymap("n", "R", ":BufferLineCycleNext<CR>", opts)
-keymap("n", "E", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<C-r>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<C-e>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Navigate line
 keymap("n", "H", "^", opts)
