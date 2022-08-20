@@ -1,5 +1,15 @@
 -- https://github.com/simrat39/symbols-outline.nvim
-vim.g.symbols_outline = {
+-- require("symbols-outline").setup()
+-- require("symbols-outline").setup()
+local status_ok, outline = pcall(require, "symbols-outline")
+if not status_ok then
+  vim.notify("symbols_outline not found")
+  return
+end
+
+-- outline.setup()
+
+local opts = {
     highlight_hovered_item = true,
     show_guides = true,
     auto_preview = false,
@@ -51,3 +61,5 @@ vim.g.symbols_outline = {
         TypeParameter = {icon = "𝙏", hl = "TSParameter"}
     }
 }
+
+outline.setup(opts)

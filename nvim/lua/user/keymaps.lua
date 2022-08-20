@@ -94,6 +94,8 @@ keymap("v", ">", ">gv", opts)
 -- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
+-- local opts = {
+
 -- Visual Block --
 -- Move text up and down
 -- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -103,10 +105,10 @@ keymap("v", "p", '"_dP', opts)
 
 -- Terminal --
 -- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
@@ -145,15 +147,15 @@ keymap('n', '<leader>j', ']c', opts)
 keymap('n', '<leader>k', '[c', opts)
 
 -- unit test
-keymap("n", "<leader>rr", "<cmd>UltestNearest<cr>", opts)
-keymap("n", "<leader>rd", "<cmd>UltestDebugNearest<cr>", opts)
+-- keymap("n", "<leader>rr", "<cmd>UltestNearest<cr>", opts)
+-- keymap("n", "<leader>rd", "<cmd>UltestDebugNearest<cr>", opts)
 
 -- comment
-keymap("n", "gcf", "<cmd>Dox<cr>", opts)
+-- keymap("n", "gcf", "<cmd>Dox<cr>", opts)
 
 -- sniprun
-keymap("n", "<leader>rf", ":%SnipRun<cr>", opts)
-keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
+-- keymap("n", "<leader>rf", ":%SnipRun<cr>", opts)
+-- keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 
 -- spell check
 vim.cmd(
