@@ -81,6 +81,7 @@ local opts = {
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Welcome" },
   ["r"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+  ["b"] = { "<cmd>Telescope buffers<cr>", "Open all buffers" },
   -- ["b"] = {
   --   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   --   "Buffers",
@@ -111,10 +112,6 @@ local mappings = {
 
   ["P"] = { "<cmd>SessionManager load_session<cr>", "Projects" },
 
-  ["t"] = {
-    "<cmd>UltestSummary<CR>", "Unit Test"
-  },
-
   ["o"] = {
     "<cmd>SymbolsOutline<CR>", "Outline"
   },
@@ -123,30 +120,30 @@ local mappings = {
     "Clipboard Manager"
   },
 
-  c = {
-    name = "CMake",
-    g = {"<cmd>CMake configure<CR>", "Configure"},
-    t = {"<cmd>CMake select_target<CR>", "SelectTarget"},
-    T = {"<cmd>CMake select_build_type<CR>", "SelectBuildType"},
-    b = {"<cmd>CMake build<CR>", "BuildTarget"},
-    a = {"<cmd>CMake build_all<CR>", "BuildAll"},
-    r = {"<cmd>CMake build_and_run<CR>", "Run"},
-    d = {"<cmd>CMake build_and_debug<CR>", "DebugTarget"},
-    c = {"<cmd>CMake cancel<CR>", "Cancel"},
-    s = {"<cmd>CMake set_target_args<CR>", "SetArg"},
-  },
+  -- c = {
+  --   name = "CMake",
+  --   g = {"<cmd>CMake configure<CR>", "Configure"},
+  --   t = {"<cmd>CMake select_target<CR>", "SelectTarget"},
+  --   T = {"<cmd>CMake select_build_type<CR>", "SelectBuildType"},
+  --   b = {"<cmd>CMake build<CR>", "BuildTarget"},
+  --   a = {"<cmd>CMake build_all<CR>", "BuildAll"},
+  --   r = {"<cmd>CMake build_and_run<CR>", "Run"},
+  --   d = {"<cmd>CMake build_and_debug<CR>", "DebugTarget"},
+  --   c = {"<cmd>CMake cancel<CR>", "Cancel"},
+  --   s = {"<cmd>CMake set_target_args<CR>", "SetArg"},
+  -- },
 
-  d = {
-    name = "Debug",
-    R = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
-    E = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
-    X = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
-    -- C = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", "Conditional Breakpoint" },
-    T = { "<cmd>lua require'dapui'.toggle('sidebar')<cr>", "Toggle Sidebar" },
-    p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
-    r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
-    q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
-
+  -- d = {
+  --   name = "Debug",
+  --   R = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
+  --   E = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
+  --   X = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+  --   -- C = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", "Conditional Breakpoint" },
+  --   T = { "<cmd>lua require'dapui'.toggle('sidebar')<cr>", "Toggle Sidebar" },
+  --   p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
+  --   r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+  --   q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
+  --
     -- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
     -- c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
     -- d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
@@ -158,9 +155,9 @@ local mappings = {
     -- o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
     -- t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
     -- u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
-  },
+  -- },
 
-  T = {
+  t = {
     name = "Trouble",
     t = { "<cmd>Trouble<cr>", "ToggleTrouble" },
     d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostics"},

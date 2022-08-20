@@ -23,4 +23,11 @@
 
 # 3. find file
 
-+
++ open the telescope.vim git
++ https://github.com/sharkdp/fd 
++ sudo apt install fd-find
+
+# 4. grep file
+
++ open the telescope.vim git
++ sudo apt-get install ripgrep
