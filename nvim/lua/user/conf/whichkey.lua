@@ -80,13 +80,14 @@ local opts = {
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Welcome" },
-  ["r"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+  ["o"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
   ["b"] = { "<cmd>Telescope buffers<cr>", "Open all buffers" },
+  ["c"] = { "<cmd>Telescope command_history<cr>", "Open all buffers" },
   -- ["b"] = {
   --   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   --   "Buffers",
   -- },
-  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  ["1"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   -- ["w"] = { "<cmd>w!<CR>", "Save" },
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
   -- ["/"] = { "<cmd>lua require('Comment').toggle()<CR>", "Comment" },
@@ -109,10 +110,11 @@ local mappings = {
     "Find Symobls",
   },
   ["p"] = { "<cmd>Telescope projects<cr>", "Projects" },
+  ["r"] = { "<cmd>Telescope lsp_references<cr>", "Projects" },
 
   ["P"] = { "<cmd>SessionManager load_session<cr>", "Projects" },
 
-  ["o"] = {
+  ["0"] = {
     "<cmd>SymbolsOutline<CR>", "Outline"
   },
   ["v"] = {
@@ -156,6 +158,13 @@ local mappings = {
     -- t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
     -- u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
   -- },
+
+  m = {
+    name = "SessonManager",
+    s = { "<cmd>:SessionManager save_current_session<cr>", "save_current_session" },
+    l = { "<cmd>:SessionManager load_current_dir_session<cr>", "load_current_dir_session" },
+  },
+
 
   t = {
     name = "Trouble",
